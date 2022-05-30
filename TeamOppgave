@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team X Uke 4 Oppgave</title>
+
+<style>
+
+
+    
+</style>
+
+
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script>
+
+        //model
+        var space1 = '___';
+        var space2 = '___';
+        var space3 = '___';
+
+
+
+        
+        //view
+
+        updateView();
+
+        function updateView() {/*HTML*/`
+        <div>Det var en gang ${space1}, ${space2}, ${space3} .</div>
+        <div id="svar1"ondrop="drop(event)" ondragover="allowDrop(event, this)">En</div>
+        <div id="svar2 ondrop(event)" ondragover="allowDrop(event, this)">To</div>
+        <div id="svar3 ondrop(event)" ondragover="allowDrop(event, this)"">Tre</div>
+        <div id="svar4 ondrop(event)" ondragover="allowDrop(event, this)"">Menn</div>
+        <div id="svar5 ondrop(event)" ondragover="allowDrop(event, this)"">Mann</div>
+        <div id="svar6 ondrop(event)" ondragover="allowDrop(event, this)"">Kvinne</div>
+        <div id="svar7 ondrop(event)" ondragover="allowDrop(event, this)"">Kvinner</div>
+        <div id="svar8 ondrop(event)" ondragover="allowDrop(event, this)"">Rød</div>
+        <div id="svar9 ondrop(event)" ondragover="allowDrop(event, this)"">Blå</div>
+        <div id="svar10 ondrop(event)" ondragover="allowDrop(event, this)"">Grønn</div>
+
+
+        `;
+    }
+
+
+        //controller
+        function text (){
+            
+        }
+
+
+
+
+
+    </script>
+    
