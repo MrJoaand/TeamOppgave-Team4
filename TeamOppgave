@@ -49,7 +49,12 @@
 
         `;
     }
-
+    
+        function answer() {
+                /*
+                Svar ----> Space
+                */
+            }
 
         //controller
         function text (){
