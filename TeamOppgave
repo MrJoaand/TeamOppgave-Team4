@@ -18,7 +18,19 @@
 
 <body>
     <div id="app"></div>
-
+<div id="container1">
+        <div>Det var en gang ${space1}, ${space2}, ${space3} .</div>
+        <div id="svar1" ondrop=drop(event) ondragover="allowDrop(event, this)"> En</div>
+        <div id="svar2" ondrop=drop(event) ondragover="allowDrop(event, this)"> To</div>
+        <div id="svar3" ondrop=drop(event) ondragover="allowDrop(event, this)"> Tre</div>
+        <div id="svar4" ondrop=drop(event) ondragover="allowDrop(event, this)"> Menn</div>
+        <div id="svar5" ondrop=drop(event) ondragover="allowDrop(event, this)"> Mann</div>
+        <div id="svar6" ondrop=drop(event) ondragover="allowDrop(event, this)"> Kvinne</div>
+        <div id="svar7" ondrop=drop(event) ondragover="allowDrop(event, this)"> Kvinner</div>
+        <div id="svar8" ondrop=drop(event) ondragover="allowDrop(event, this)"> Rød</div>
+        <div id="svar9" ondrop=drop(event) ondragover="allowDrop(event, this)"> Blå</div>
+        <div id="svar10" ondrop=drop(event) ondragover="allowDrop(event, this)"> Grønn</div>
+    </div>
     <script>
 
         //model
@@ -33,22 +45,7 @@
 
         updateView();
 
-        function updateView() {/*HTML*/`
-        <div>Det var en gang ${space1}, ${space2}, ${space3} .</div>
-        <div id="svar1"ondrop="drop(event)" ondragover="allowDrop(event, this)">En</div>
-        <div id="svar2 ondrop=drop(event)" ondragover="allowDrop(event, this)">To</div>
-        <div id="svar3 ondrop=drop(event)" ondragover="allowDrop(event, this)">Tre</div>
-        <div id="svar4 ondrop=drop(event)" ondragover="allowDrop(event, this)">Menn</div>
-        <div id="svar5 ondrop=drop(event)" ondragover="allowDrop(event, this)">Mann</div>
-        <div id="svar6 ondrop=drop(event)" ondragover="allowDrop(event, this)">Kvinne</div>
-        <div id="svar7 ondrop=drop(event)" ondragover="allowDrop(event, this)">Kvinner</div>
-        <div id="svar8 ondrop=drop(event)" ondragover="allowDrop(event, this)">Rød</div>
-        <div id="svar9 ondrop=drop(event)" ondragover="allowDrop(event, this)">Blå</div>
-        <div id="svar10 ondrop=drop(event)" ondragover="allowDrop(event, this)">Grønn</div>
-
-
-        `;
-    }
+        
         function drop(ev) {
                     ev.preventDefault();
                     var data = ev.dataTransfer.getData("text");
