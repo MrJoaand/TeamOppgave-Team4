@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='app'></div>
+
+    <script>
+        //hjelpevariabel
+        let appDiv = document.getElementById('app');
+
+
+        //model
+       
+        let alt1 = '___';
+        let alt2 = '___';
+        let alt3 = '___';
+
+        //view
+
+        updateView();
+    
+
+        function updateView(){
+            html = '';
+            html += `
+        <div>Det var en gang en lærer som het Therese. Hun elsket ${alt1} ${alt2} ${alt3} .</div>
+        <div onclick="word1(this)">Grove</div>  <div onclick="word1(this)">Tørre</div></br>   
+        <div onclick="word1(this)">Brødskiver</div> <div onclick="word1(this)">Vitser</div>
+        `
+        appDiv.innerHTML = html
+        }
+        
+       
+
+
+
+        //controller
+        function word1(sjanger){
+            if(alt1 == '___' ){
+                alt1 = sjanger.innerHTML;
+            
+            }
+            else if(alt1 != '___' && alt2 == '___' ){
+                alt2 = sjanger.innerHTML
+                
+            }
+            else{
+                alt3 = sjanger.innerHTML;
+            }
+
+            updateView()
+ 
+        }
+        
+
+
+
+    </script>
+</body>
+</html>
