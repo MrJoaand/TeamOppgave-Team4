@@ -36,6 +36,7 @@
         <div id="svar9" class="frame" draggable="true" ondrop=drop(event) ondragover="allowDrop(event, this)"> Blå</div>
         <div id="svar10" class="frame" ondrop=drop(event) ondragover="allowDrop(event, this)"> Grønn</div>
     </div>
+
     <div>
         <div id="choose">
             <div id="svar1" class="frame" ondrop="drop(event)" draggable="true" ondragstart="drag(event)" width="200"
