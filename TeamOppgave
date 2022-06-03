@@ -7,74 +7,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team X Uke 4 Oppgave</title>
 
-<style>
-
-
-    
-</style>
+    <style>
+        .frame {
+            border: 2px;
+            border-color: grey;
+        }
+    </style>
 
 
 </head>
 
 <body>
     <div id="app"></div>
-<div id="container1">
+    <div id="container1">
         <div>Det var en gang ${space1}, ${space2}, ${space3} .</div>
-        <div id="svar1" ondrop=drop(event) ondragover="allowDrop(event, this)"> En</div>
-        <div id="svar2" ondrop=drop(event) ondragover="allowDrop(event, this)"> To</div>
-        <div id="svar3" ondrop=drop(event) ondragover="allowDrop(event, this)"> Tre</div>
-        <div id="svar4" ondrop=drop(event) ondragover="allowDrop(event, this)"> Menn</div>
-        <div id="svar5" ondrop=drop(event) ondragover="allowDrop(event, this)"> Mann</div>
-        <div id="svar6" ondrop=drop(event) ondragover="allowDrop(event, this)"> Kvinne</div>
-        <div id="svar7" ondrop=drop(event) ondragover="allowDrop(event, this)"> Kvinner</div>
-        <div id="svar8" ondrop=drop(event) ondragover="allowDrop(event, this)"> Rød</div>
-        <div id="svar9" ondrop=drop(event) ondragover="allowDrop(event, this)"> Blå</div>
-        <div id="svar10" ondrop=drop(event) ondragover="allowDrop(event, this)"> Grønn</div>
+        <div id="svar1" class="frame" draggable="true" ondrop=drop(event) ondragover="allowDrop(event, this)"> En</div>
+        <div id="svar2" class="frame" draggable="true" ondrop=drop(event) ondragover="allowDrop(event, this)"> To</div>
+        <div id="svar3" class="frame" draggable="true" ondrop=drop(event) ondragover="allowDrop(event, this)"> Tre</div>
+        <div id="svar4" class="frame" draggable="true" ondrop=drop(event) ondragover="allowDrop(event, this)"> Menn
+        </div>
+        <div id="svar5" class="frame" draggable="true" ondrop=drop(event) ondragover="allowDrop(event, this)"> Mann
+        </div>
+        <div id="svar6" class="frame" draggable="true" ondrop=drop(event) ondragover="allowDrop(event, this)"> Kvinne
+        </div>
+        <div id="svar7" class="frame" draggable="true" ondrop=drop(event) ondragover="allowDrop(event, this)"> Kvinner
+        </div>
+        <div id="svar8" class="frame" draggable="true" ondrop=drop(event) ondragover="allowDrop(event, this)"> Rød</div>
+        <div id="svar9" class="frame" draggable="true" ondrop=drop(event) ondragover="allowDrop(event, this)"> Blå</div>
+        <div id="svar10" class="frame" ondrop=drop(event) ondragover="allowDrop(event, this)"> Grønn</div>
     </div>
-    <script>
+    <div>
+        <div id="choose">
+            <div id="svar1" class="frame" ondrop="drop(event)" draggable="true" ondragstart="drag(event)" width="200"
+                height="200" ondragover="allowDrop(event, this)">
 
-        //model
-        var space1 = '___';
-        var space2 = '___';
-        var space3 = '___';
+                <script>
+
+                    //model
+                    var space1 = '___';
+                    var space2 = '___';
+                    var space3 = '___';
 
 
-        // Hei! Dette er en test kommentar.
-        
-        //view
+                    // Hei! Dette er en test kommentar.
 
-        updateView();
+                    function drop(ev) {
+                        ev.preventDefault();
+                        var data = ev.dataTransfer.getData("text");
+                        ev.target.appendChild(document.getElementById(data));
 
-        
-        function drop(ev) {
-                    ev.preventDefault();
-                    var data = ev.dataTransfer.getData("text");
-                    ev.target.appendChild(document.getElementById(data));
+                    }
 
-                }
+                    function drag(ev) {
+                        ev.dataTransfer.setData("text", ev.target.id);
+                    }
 
-                function drag(ev) {
-                    ev.dataTransfer.setData("text", ev.target.id);
-                }
-
-                function allowDrop(ev) {
-                    ev.target.draggable ? "" : ev.preventDefault();
-                }
-    
-        function answer() {
-                /*
-                Svar ----> Space
-                */
-            }
-
-        //controller
-        function text (){
-            
-        }
+                    function allowDrop(ev) {
+                        ev.target.draggable ? "" : ev.preventDefault();
+                    }
 
 
 
 
+                </script>
+</body>
 
-    </script>
+</html>
     
